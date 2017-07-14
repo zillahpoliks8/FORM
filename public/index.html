@@ -1,73 +1,55 @@
-<h1>GRABBA' CAB</h1>
-<form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Feedback Form</title>
+</head>
+<body>
+	<form id="contact-form" action="linku.html" method="post">
+<h1>Feedback Form</h1>
+<ul>
+<li><label for="name">Name:</label> <input type="text" name="name" id="name" value="" /></li>
+<li><label for="email">Email:</label> <input type="text" name="email" id="email" value="" /></li>
+<li><label for="pwd">Password:</label> <input type="password" name="pwd" id="pwd" value="" /></li>
+</ul>
 
-<p>
-<label>Name
-<input type="text" name="customer_name" required>
-</label> 
-</p>
+<ul>
+  <li>Please check all the emotions that apply to you:
+    <ul>
+      <li><label for="angry">Angry</label> <input type="checkbox" name="angry" id="angry" value="angry"></li>
+      <li><label for="sad">Sad</label> <input type="checkbox" name="sad" id="sad" value="sad"></li>
+      <li><label for="happy">Happy</label> <input type="checkbox" name="happy" id="happy" value="happy"></li>
+      <li><label for="ambivalent">Ambivalent</label> <input type="checkbox" name="ambivalent" id="ambivalent" value="ambivalent"></li>
+    </ul>
+  </li>
+  <li>How satisfied were you with our service?
+    <ul>
+      <li><label for="vsat">Very satisfied</label> <input type="radio" name="satisfaction" id="vsat" value="vsat"></li>
+      <li><label for="sat">Satisfied</label> <input type="radio" name="satisfaction" id="sat" value="sat"></li>
+      <li><label for="dcare">Didn't care</label> <input type="radio" name="satisfaction" id="dcare" value="dcare"></li>
+      <li><label for="disat">Dissatisfied</label> <input type="radio" name="satisfaction" id="disat" value="disat"></li>
+      <li><label for="vdisat">Very dissatisfied</label> <input type="radio" name="satisfaction" id="vdisat" value="vdisat"></li>
+    </ul>
+  </li>
+  <li><label for="comments">Further comments:</label> <textarea name="comments" id="comments" cols="25" rows="3"></textarea></li>
+</ul>
 
-<p>
-<label>Phone 
-<input type="tel" name="phone_number">
-</label>
-</p>
+<ul>
+  <li><label for="photo">Bio photo:</label> <input type="file" name="photo" id="photo" value="" /></li>
+  <li><label for="location">Location visited:</label>
+  <select name="location" id="location">
+    <option value="">Select location</option>
+    <option value="nyork">New York</option>
+    <option value="vancouver">Vancouver</option>
+    <option value="atlantis">Atlantis</option>
+    <option value="alpha">Alpha Centauri</option>
+    <option value="blackpool">Blackpool</option>
+    <option value="bognor">Bognor Regis</option>
+  </select></li>
+</ul>
 
-<p>
-<label>Email 
-<input type="email" name="email_address">
-</label>
-</p>
-
-<fieldset>
-<legend>Which taxi do you require?</legend>
-<p><label> <input type="radio" name="taxi" required value="car"> Car </label></p>
-<p><label> <input type="radio" name="taxi" required value="van"> Van </label></p>
-<p><label> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
-</fieldset>
-
-<fieldset>
-<legend>Extras</legend>
-<p><label> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-<p><label> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access </label></p>
-<p><label> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
-</fieldset>
-
-<p>
-<label>Pickup Date/Time
-<input type="datetime-local" name="pickup_time" required>
-</label>
-</p>
-	
-<p>
-<label>Pickup Place
-<select id="pickup_place" name="pickup_place">
-<option value="" selected="selected">Select One</option>
-<option value="office" >Taxi Office</option>
-<option value="town_hall" >Town Hall</option>
-<option value="telepathy" >We'll Guess!</option>
-</select>
-</label> 
-</p>
-
-<p>
-<label>Dropoff Place
-<input type="text" name="dropoff_place" required list="destinations">
-</label>
-
-<datalist id="destinations">
-<option value="Airport">
-<option value="Beach">
-<option value="Fred Flinstone's House">
-</datalist>
-</p>
-
-<p>
-<label>Special Instructions
-<textarea name="comments" maxlength="500"></textarea>
-</label>
-</p>
-
-<p><button>Submit Booking</button></p>
+<li><input type="submit" value="submit"/></li>
 
 </form>
+</body>
+</html>
