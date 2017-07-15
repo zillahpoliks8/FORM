@@ -9,15 +9,15 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'nt.html'));
+  res.sendFile(path.join(__dirname, 'public/nt.html'));
 });
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, '404.html'));
+  res.sendFile(path.join(__dirname, 'public/404.html'));
 });
 
 var server = app.listen(app.get('port'), function(){
